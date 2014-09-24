@@ -1,0 +1,59 @@
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:100%;}
+#header {height:62px; background:#dde2e5; margin-bottom:5px;}
+#menu {height:40px; background:#693; margin-bottom:5px;}
+#mainContent {height:500px; margin-bottom:5px;}
+#sidebar {float:right; width:200px; height:500px; background:#cf9;}
+#content {margin-right:205px !important; margin-right:202px; height:500px; background:#ffa;}/*当content设定高度后，3像素会跑到content外侧，这样，我们用!important修正在ie下向左多浮动2像素，加上3像素的bug正好是5像素，所以在火狐和IE下显示是一样的*/
+#footer {height:42px; background:#5d554a url(../images/down.gif) no-repeat center 0;}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  text-align: center;
+  white-space: normal;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+       border-radius: 0px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+       background-clip: padding-box;
+}
+
+.popover.top {
+  margin-top: 0px;
+}
+
+.popover.right {
+  margin-left: 10px;
+}
+
+.popover.bottom {
+  margin-top: 0px;
+}
+
+.popover.left {
+  margin-left: -10px;
+}
+
+.nav > li > a:hover {
+  color: white;
+  background-color: #0081C2;
+ }
+
+.nav > li > a.maintainHover {
+  color: white;
+  background-color: #0081C2;
+}

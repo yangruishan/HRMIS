@@ -1,0 +1,36 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aoa.hrmis.persistence.Operator">
+
+  <cache />
+	
+  <select id="getOperatorByAccountAndPassword" resultType="Operator">
+		select * from sys_operator 
+		where account=#{param1} and password=#{param2}
+	</select>
+
+	<select id="getAllEntities" resultType="Operator">
+		select * from sys_operator
+ 	</select>
+
+	<select id="findEntityById" resultType="Operator">
+		select * from sys_operator 
+		where id=#{id}
+ 	</select>
+
+	<insert id="insertEntity" parameterType="Operator" useGeneratedKeys=”true” keyProperty=”id”>
+		insert into
+		sys_operator(account,password,employeeID) values(#{account},#{password},#{employeeID})
+ 	</insert>
+
+	<update id="updateEntity" parameterType="Operator">
+		update sys_operator set account=#{account},password=#{password},employeeID=#{employeeID} 
+		where id=#{id}
+ 	</update>
+ 	
+	<delete id="deleteEntity" parameterType="long">
+		delete from sys_operator 
+		where id=#{id}
+	</delete>
+</mapper>
